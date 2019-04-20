@@ -31,7 +31,12 @@
       
 */
 
-
+window.addEventListener("load", function () {
+      var changingCells = document.elementFromPoint.travelExp;
+      changingCells[i].onchange = function (e) {
+            changingCells[i].getElementById("submitButton").onclick = validateSummary;
+      }
+});
 
 
 
