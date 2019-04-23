@@ -30,16 +30,48 @@
       Formats the value, "val", as U.S. currency.
       
 */
-
+// When the page loads, there is an anonymous function that will control the submit button by defining that the submit button should equal to the validateSummary function when clicked.
 window.addEventListener("load", function () {
-      var changingCells = document.elementFromPoint.travelExp;
-      changingCells[i].onchange = function (e) {
-            changingCells[i].getElementById("submitButton").onclick = validateSummary;
+      var changingCells = document.querySelectorAll('input[class="sum"]');
+      for (var i = 0; i < changingCells.length; i++) {
+            changingCells[i].onchange = calcExp;
       }
+      document.getElementById("submitButton").onclick = validateSummary;
 });
+// The function validateSummary has a variable that will get the summary id. Then, if validate is missing, a message will pop up. If not, there will be nothing which is defined by an empty text string.
+function validateSummary() {
+      var validate = document.getElementById("summary");
+      if (validate.validity.valueMissing) {
+            validate.setCustomValidity("You must include a summary of the trip in your report.")
+      } else {
+            validate.setCustomValidity("");
+      };
+}
 
+function calcClass(sumClass) {
+      var sumFields = document.getElementsByClassName("sumClass");
+      var sumTotal = 0;
+      for (var i = 0; i < sumFields.length; i++) {
+            var itemValue = parseFloat(sumFields);
+            if (itemValue === isNaN()) {
 
+            } else {
 
+            }
+      }
+      return sumTotal;
+};
+
+function calcExp() {
+      var expTable = document.querySelectorAll(tr);
+      for (var i = 0; i < expTable.length; i++) {
+            calcClass(dateIndex) = subtotalIndex;
+      }
+      var transTotal = calcClass(trans);
+      var lodgeTotal = calcClass(lodge);
+      var mealTotal = calcClass(meal);
+      var otherTotal = calcClass(other);
+}
 
 
 
